@@ -25,7 +25,6 @@ function sumUnlimited(number){
         } else {
             return counter;
         }
-        return by;
     }}
 
 console.log(sumUnlimited(5)(6)(100)());
