@@ -10,21 +10,9 @@ for (let i=0; i<array.length; i++) { // complexity : n
 }
 
 console.log(hash);
+console.log(Object.keys(hash).sort((a,b)=>hash[b]-hash[a])); // nlogn
 
-let sortedPairs = [];
-
-for (let i in hash){ // complexity: < n
-    sortedPairs.push({
-        key: i,
-        value: hash[i]
-    })
-}
-
-console.log(sortedPairs);
-
-sortedPairs = sortedPairs.sort((a,b)=> b.value - a.value); // complexity: nlogn
-
-console.log(sortedPairs.map(el=>el.key)); // complexity n
-
-// overal complexity n+n+nlogn+n = 3n+nlogn = n(3+logn) ± nlogn
+// overal complexity n+n+nlogn = 2n+nlogn = n(2+logn) ± nlogn
 // space complexity: 2n
+
+
